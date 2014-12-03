@@ -1,0 +1,76 @@
+footer {
+	width: 100%;
+	height: 300px;
+	color: #FFF;
+	background-color: #101010;
+}
+
+.subFooter {
+	width: 100%;
+	height: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 0 0 0 0;
+	background-color: #101010
+}
+
+.mainFooter a:link, .mainFooter a:visited {
+	color: #FFF;
+	height: 20px
+}
+
+.twitter {
+	height: 10px;
+	width: 10px;
+	float: right;
+	position: relative;
+	top: 20px;
+	right: 25px;
+}
+
+.fb {
+	height: 10px;
+	width: 10px;
+	float: right;
+	position: relative;
+	top: 20px;
+	right: 55px;	
+}
+
+.pinterest {
+	height: 10px;
+	width: 10px;
+	float: right;
+	position: relative;
+	top: 20px;
+	right: 75px;
+}
+
+.instagram {
+	height: 10px;
+	width: 10px;
+	float: right;
+	position: relative;
+	top: 20px;
+	right: 125px;
+}
+
+.subFooter div {
+	height: 200px;
+	width: 200px;
+	float: left;
+}
+
+.subFooter div ul {
+	list-style: none;
+	padding: 0 0;
+}
+
+
+
+.subFooter p {
+	position: relative;
+	top: 250px;
+	left: 40px;
+	float: right;
+}

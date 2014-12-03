@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+	<title> 
+		alambiLAB
+	</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../../css/header.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/mainContent.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/body.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/sidebar.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/mainFooter.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/img.css" type="text/css" />
+	<meta name="viewport" content="width-device-width, initial-scale=1.0"/>
+	<script type="text/javascript" src="../../js/readmore.js"></script>
+	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			function initialise() {
+				var mapCanvas1 = document.getElementById('map1-canvas');
+	    		var myLatlng1 = new google.maps.LatLng(51.928045,-1.366924);
+	    		var mapOptions1 = {
+	  				center:myLatlng1,
+	  				zoom:5,
+	  				mapTypeControl:false,
+	  				streetViewControl:false,
+	  				zoomControl: true,
+	  				zoomControlOptions: {
+	    				style: google.maps.ZoomControlStyle.DEFAULT
+	  				},
+	  				mapTypeId:google.maps.MapTypeId.ROADMAP
+	    		};
+	    		var map1 = new google.maps.Map(mapCanvas1, mapOptions1);
+	    		var marker = new google.maps.Marker({
+	   				position: myLatlng1,
+	    			map: map1,
+	    			title:"CHIPPING NORTON OFFICE"
+				}); 		
+				
+				var mapCanvas2 = document.getElementById('map2-canvas');
+	    		var myLatlng2 = new google.maps.LatLng(38.793023,0.035098);
+	    		var mapOptions2 = {
+	  				center:myLatlng2,
+	  				zoom:5,
+	  				mapTypeControl:false,
+	  				streetViewControl:false,
+	  				zoomControl: true,
+	  				zoomControlOptions: {
+	    				style: google.maps.ZoomControlStyle.DEFAULT
+	  				},
+	  				mapTypeId:google.maps.MapTypeId.ROADMAP
+	    		};
+	    		var map2 = new google.maps.Map(mapCanvas2, mapOptions2);
+	    		var marker = new google.maps.Marker({
+	   				position: myLatlng2,
+	    			map: map2,
+	    			title:"PEDREGUER OFFICE"
+				}); 
+			}
+			google.maps.event.addDomListener(window, 'load', initialise);
+		});
+	</script>	
+	<!--[if lt IE 9]>
+		<script src="../../js/html5shiv.js"></script>
+		<script src="../../js/respond.min.js"></script>
+	<![endif]-->	
+
+</head>
+<body class="body">
+	<header class="mainHeader">	
+		<a class="logo" href="#"><img src="../../img/logo.png"></a>
+		<div class="langs">
+			<a class="lang-uk" href="../../uk/home/home.html">en</a>
+			<div class="langsDivide"></div>
+			<a class="lang-cat" href="../../cat/home/home.html">es</a>
+			<div class="langsDivide"></div>
+			<a class="lang-cat" href="../../cat/home/home.html">cat</a>
+		</div>
+		<nav class="navBar">		
+			<a href="#"><div class="blog">BLOG</div></a>
+			<a href="projects.html"><div class="active projects">PROJECTS</div></a>
+			<a href="../aboutus/aboutus.html"><div class="aboutus">ABOUT US</div></a>
+			<a href="../team/team.html"><div class="team">TEAM</div></a>
+			<a href="../home/home.html"><div class="home">HOME</div></a>
+		</nav>		
+	</header>
+
+	<div class="headerDivider"></div>	
+	<main id="mainContent">
+		
+		<div id="projectsContainer">
+
+			<div id="box1" class="flexbox"><img src="../../img/projects/casaCultura-1.jpg"><div class="flexboxHeader">CASA CULTURA</div></div>
+			<div id="box2" class="flexbox"><img src="../../img/projects/casaU-1.jpg"><div class="flexboxHeader">CASA U</div></div>
+			<div id="box3" class="flexbox"><img src="../../img/projects/casaBarranc-1.jpg"><div class="flexboxHeader">CASA BARRANQUET</div></div>
+			<div id="box4" class="flexbox"><img src="../../img/projects/casaPinella-1.jpg"><div class="flexboxHeader">CASA PINELLA</div></div>
+			<div id="box5" class="flexbox"><img src="../../img/projects/casaLluera-1.jpg"><div class="flexboxHeader">LLUERNA GARDEN</div></div>
+			<div id="box6" class="flexbox"><img src="../../img/projects/elsPoets-1.jpg"><div class="flexboxHeader">POETS HOUSE</div></div>
+			
+		</div>
+		
+	</main>
+
+	<footer class="mainFooter">
+		
+		<div class="subFooter">
+
+			<div class="location">
+				<h2>LOCATION</h2>
+				<div id="map2-canvas"></div>
+				<div id="map1-canvas"></div>
+				
+			</div>
+			<div class="contact">
+				<h2>CONTACT</h2>
+				<div id="pedreguerContact">
+				<ul>
+					<span>				
+					<li>PEDREGUER</li>
+					<li>Plaça Santa Marta, 15</li>
+					<li>03750</li>
+					<li>Pedreguer</li>
+					<li>Alacant</li>
+					<br>
+					<li>TEL: +34 657 12 47 48 (Jaume)</li>
+					<li>TEL: +34 676 48 04 50 (Laia)</li>
+					<li>EMAIL: <a href="#">alambilab@gmail.com</a></li>
+				</span>
+				</ul>
+				</div>
+
+				<div id="chippyContact">
+				<ul>
+					<span>
+					<li>CHIPPING NORTON</li>
+					<li>1 The Dock, South Street</li>
+					<li>Middle Barton</li>
+					<li>Chipping Norton</li>
+					<li>OX7 7BU</li>
+					<br>
+					<li>TEL: +44(0)7533 521635</li>
+					<li>EMAIL: <a href="#">alambilab@gmail.com</a></li>
+					</span>
+				</ul>
+				</div>
+
+			</div>
+			<div id="socialButtons">
+				<div id="socialButtonContainer">
+					
+					<input type="radio" id="twitterButton" name="socialButtons" >
+					<label for="twitterButton" id="twitterLabel"><a target="_blank" href="https://twitter.com/alambilab"><img src="../../img/twitter.png"></a></label>
+					<input type="radio" id="fbButton" name="socialButtons" checked>
+					<label for="fbButton" id="fbLabel"><a target="_blank" href="https://www.facebook.com/alambilab"><img src="../../img/fb.png"></a></label>
+					<input type="radio" id="instagramButton" name="socialButtons" >
+					<label for="instagramButton" id="instagramLabel"><a target="_blank" href="http://instagram.com/alambilab"><img src="../../img/instagram.png"></a></label>
+					<input type="radio" id="pinterestButton" name="socialButtons" >
+					<label for="pinterestButton" id="pinterestLabel"><a target="_blank" href="https://www.pinterest.com/alambiLAB/"><img src="../../img/pinterest.png"></a></label>
+				</div>	
+			</div>
+			
+			<div id="socialBox">
+				<div id="fbColumn">
+
+				</div>
+				<div id="twitterColumn">
+					<a class="twitter-timeline" href="https://twitter.com/alambiLAB" data-widget-id="538099750089027585">Tweets by @alambiLAB</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div>
+				<div id="pinterestColumn">
+
+				</div>
+			</div>
+
+			<p>Copyright &copy; <a href="#">2014 alambiLAB</a></p>
+								
+		</div>
+		
+	</footer>
+</body>	
