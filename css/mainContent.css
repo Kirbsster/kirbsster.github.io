@@ -1,9 +1,9 @@
 
 main {
 	position: relative;
-	width:100%;
+
 	max-width: 1080px;
-	min-height: 680px;
+
 	margin: 50px auto;
 }
 
