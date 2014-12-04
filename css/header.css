@@ -45,7 +45,7 @@ a:link, a:visited {
 
 .navBar .active {
 	border: 1px solid #999;
-	background-color: rgb(255,255,0);
+	background-color: rgb(255,255,255);
 }
 
 .langs a {

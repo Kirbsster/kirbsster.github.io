@@ -15,140 +15,14 @@
 	<script type="text/javascript" src="js/readmore.js"></script>
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
-	<!--[if !IE]><!-->
+	<script type="text/javascript" src="js/gallery.js"></script>
+	
 	<script type="text/javascript">
 		$(document).ready(function() {
-			var imgWidth = $('#imgContainer figure img').width();
-			var windowWidth = $('#imgWindow').width();
-			var imgWidthPercent = windowWidth/imgWidth*100;
-			var numImgs = $('#imgContainer img').length;
-			var i = 0;
-			galleryPlay();
-			setInterval(galleryPlay, 8000);
-			function galleryPlay() {
-				if (i >= (numImgs)) {
-					i=0;
-				}
-				$('#imgSelect input[type=radio]').next().click(function() {
-					$('#imgSelect label').removeClass('highlight');
-					if ($(this).prev().checked=true) {
-						$(this).addClass('highlight');
-						if ($(this).prev().attr('id') == 'img1') {
-							$('#imgWindow #imgContainer').css('left', '0%')
-							$('#imgContainer #img-1').css('opacity','1');
-							$('#imgContainer #img-1 img').css('opacity','1');
-							i=0;	
-						} 
-						if ($(this).prev().attr('id') == 'img2') {
-							$('#imgWindow #imgContainer').css('left', '-100%')
-							$('#imgContainer #img-2').css('opacity','1');
-							$('#imgContainer #img-2 img').css('opacity','1');
-							i=1;
-						} 
-						if ($(this).prev().attr('id') == 'img3') {
-							$('#imgWindow #imgContainer').css('left', '-200%')
-							$('#imgContainer #img-3').css('opacity','1');
-							$('#imgContainer #img-3 img').css('opacity','1');
-							i=2;
-						}
-						if ($(this).prev().attr('id') == 'img4') {
-							$('#imgWindow #imgContainer').css('left', '-300%')
-							$('#imgContainer #img-4').css('opacity','1');
-							$('#imgContainer #img-4 img').css('opacity','1');
-							i=3;
-						}
-					}
-				});			
-				$('#imgSelect label').removeClass('highlight');
-				if (i == 0) {
-					$('#imgSelect #img1').next().addClass('highlight');
-					$('#imgContainer #img-3 img').css('opacity','1');
-					$('#imgContainer #img-4 img').css('opacity','0');
-					$('#imgContainer #img-1').css('opacity','1');
-					$('#imgContainer #img-2').css('opacity','0');
-				}
-				if (i == 1) {
-					$('#imgSelect #img2').next().addClass('highlight');
-					$('#imgContainer #img-4 img').css('opacity','1');
-					$('#imgContainer #img-1 img').css('opacity','0');
-					$('#imgContainer #img-2').css('opacity','1');
-					$('#imgContainer #img-3').css('opacity','0');
-				}
-				if (i == 2) {
-					$('#imgSelect #img3').next().addClass('highlight');
-					$('#imgContainer #img-1 img').css('opacity','1');
-					$('#imgContainer #img-2 img').css('opacity','0');
-					$('#imgContainer #img-3').css('opacity','1');
-					$('#imgContainer #img-4').css('opacity','0');
-				}
-				if (i == 3) {
-					$('#imgSelect #img4').next().addClass('highlight');
-					$('#imgContainer #img-2 img').css('opacity','1');
-					$('#imgContainer #img-3 img').css('opacity','0');
-					$('#imgContainer #img-4').css('opacity','1');
-					$('#imgContainer #img-1').css('opacity','0');
-				}
-				$('#imgContainer').css('left', -1*i*imgWidthPercent+'%' )
-				i = i+1;
-			}
+			gallery();
 		});
 	</script>
-	<!--<![endif]-->
-	<!--[if IE]>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			var imgWidth = $('#imgContainer figure img').width();
-			var windowWidth = $('#imgWindow').width();
-			var imgWidthPercent = windowWidth/imgWidth*100;
-			var numImgs = $('#imgContainer img').length;
-			var i = 0;
-			galleryPlay();
-			setInterval(galleryPlay, 8000);
-			function galleryPlay() {
-				if (i >= (numImgs)) {
-					i=0;
-				}
-				$('#imgSelect input[type=radio]').next().click(function() {
-					$('#imgSelect label').removeClass('highlight');
-					if ($(this).prev().checked=true) {
-						$(this).addClass('highlight');
-						if ($(this).prev().attr('id') == 'img1') {
-							$('#imgWindow #imgContainer').css('left', '0%')
-							i=0;	
-						} 
-						if ($(this).prev().attr('id') == 'img2') {
-							$('#imgWindow #imgContainer').css('left', '-100%')
-							i=1;
-						} 
-						if ($(this).prev().attr('id') == 'img3') {
-							$('#imgWindow #imgContainer').css('left', '-200%')
-							i=2;
-						}
-						if ($(this).prev().attr('id') == 'img4') {
-							$('#imgWindow #imgContainer').css('left', '-300%')
-							i=3;
-						}
-					}
-				});			
-				$('#imgSelect label').removeClass('highlight');
-				if (i == 0) {
-					$('#imgSelect #img1').next().addClass('highlight');
-				}
-				if (i == 1) {
-					$('#imgSelect #img2').next().addClass('highlight');
-				}
-				if (i == 2) {
-					$('#imgSelect #img3').next().addClass('highlight');
-				}
-				if (i == 3) {
-					$('#imgSelect #img4').next().addClass('highlight');
-				}
-				$('#imgContainer').css('left', -1*i*imgWidthPercent+'%' )
-				i = i+1;
-			}
-		});
-	</script>
-	<![endif]-->
+
 	<script type="text/javascript">
 	$(document).ready(function() {	
 		function initialise() {
@@ -229,12 +103,12 @@
 				<div id="imgWindow">
 					<div id="imgContainer">
 						<figure id="img-1"><img src="img/home-casaU-16-9.jpg"></figure>
-						<figure id="img-2"><img src="img/home-casaBarranc-16-9.jpg"></figure>
+						<figure id="img-2"><img src="img/home-casaBarranc-2.jpg"></figure>
 						<figure id="img-3"><img src="img/home-casaPinella-16-9.jpg"></figure>
 						<figure id="img-4"><img src="img/home-casaLaia-16-9.jpg"></figure>
 					</div>
 				</div>
-				<input type="radio" name="radio" id="img1" />
+				<input type="radio" name="radio" id="img1" checked />
 				<label class='highlight' for="img1"></label>
 				<input type="radio" name="radio" id="img2" />
 				<label for="img2"></label>
