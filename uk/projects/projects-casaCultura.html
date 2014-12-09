@@ -15,6 +15,12 @@
 	<script type="text/javascript" src="../../js/readmore.js"></script>
 	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript" src="../../js/galleryProjects.js"></script>
+	<script type="text/javascript">
+		window.onload = function() {
+			galleryProjects();
+		};
+	</script>
 	<script type="text/javascript">
 		$(document).ready(function() {
 			function initialise() {
@@ -88,19 +94,68 @@
 
 	<div class="headerDivider"></div>	
 	<main id="mainContent">
-		<h1>PROJECTS</h1>
-		<div>
-			<p><h2>EXTENSION OF CUTURAL CENTRE</h2></p>
-			<p>2014</p>
-			<p><h3>Public Building</h3></p>
-			<p>Educational building and public space</p>
-			<p>Pedreguer</p>			
-			<div>
-				<img src="../../img/projects/casaCultura-1.jpg">
-			</div>
-			
+		<div class="tags">
+			<ul>
+				<a href=""><li>architecture</li></a> >
+				<a href=""><li>public</li></a>
+			</ul>
 		</div>
-		
+		<div class="projectDetail">
+			<div class="projectDesc">
+				<div class="title">
+					<h2>EXTENSION OF CUTURAL CENTRE</h2>
+				</div>
+				<div class="description">
+					<p>Renovation and extension of the cultural house building in Pedreguer to provide extra teaching and storage space</p>
+				</div>
+				<div class="details">
+					<ul>
+						<li><span>Location:</span> Alicante, Pedreguer</li>
+						<li><span>Year:</span> 2014</li>
+						<li><span>Area:</span> 110sqm</li>
+					</ul>
+				</div>
+				<div class="extraDescription">
+					<p>Renovation and extension of the cultural house building in Pedreguer to provide extra teaching and storage space</p>
+				</div>				
+			</div>		
+			<a href="#"><div id="prevProject"><p><</p></div></a>
+			<a href="#"><div id="nextProject"><p>></p></div></a>
+			<div class="projectGallery">
+				<div class="imgSelect">
+					<div class="imgWindow">
+						<div class="back"><img src="../../img/arrowLeft.png"></div>
+						<div class="forward"><img src="../../img/arrowRight.png"></div>
+						<div class="imgContainer">
+							<figure id="img-1"><img src="../../img/projects/projects-casaCultura/home-casaU-16-9.jpg"></figure>
+							<figure id="img-2"><img src="../../img/projects/projects-casaCultura/home-casaBarranc-2.jpg"></figure>
+							<figure id="img-3"><img src="../../img/projects/projects-casaCultura/home-casaPinella-16-9.jpg"></figure>
+							<figure id="img-4"><img src="../../img/projects/projects-casaCultura/home-casaLaia-16-9.jpg"></figure>
+							<figure id="img-1"><img src="../../img/projects/projects-casaCultura/home-casaU-16-9.jpg"></figure>
+							<figure id="img-2"><img src="../../img/projects/projects-casaCultura/home-casaBarranc-2.jpg"></figure>
+							<figure id="img-3"><img src="../../img/projects/projects-casaCultura/home-casaPinella-16-9.jpg"></figure>
+							<figure id="img-4"><img src="../../img/projects/projects-casaCultura/home-casaLaia-9-9.jpg"></figure>
+						</div>
+					</div>
+					<input type="radio" name="radio" id="img1" checked />
+					<label class='highlight' for="img1"><img src="../../img/projects/projects-casaCultura/home-casaU-16-9-thumb.jpg"></label>
+					<input type="radio" name="radio" id="img2" />
+					<label for="img2"><img src="../../img/projects/projects-casaCultura/home-casaBarranc-2-thumb.jpg"></label>
+					<input type="radio" name="radio" id="img3" />
+					<label for="img3"><img src="../../img/projects/projects-casaCultura/home-casaPinella-16-9-thumb.jpg"></label>	
+					<input type="radio" name="radio" id="img4" />
+					<label for="img4"><img src="../../img/projects/projects-casaCultura/home-casaLaia-16-9-thumb.jpg"></label>		
+					<input type="radio" name="radio" id="img1" />
+					<label class='highlight' for="img1"><img src="../../img/projects/projects-casaCultura/home-casaU-16-9-thumb.jpg"></label>
+					<input type="radio" name="radio" id="img2" />
+					<label for="img2"><img src="../../img/projects/projects-casaCultura/home-casaBarranc-2-thumb.jpg"></label>
+					<input type="radio" name="radio" id="img3" />
+					<label for="img3"><img src="../../img/projects/projects-casaCultura/home-casaPinella-16-9-thumb.jpg"></label>	
+					<input type="radio" name="radio" id="img4" />
+					<label for="img4"><img src="../../img/projects/projects-casaCultura/home-casaLaia-9-9-thumb.jpg"></label>						
+				</div>
+			</div>		
+		</div>	
 	</main>
 
 	<footer class="mainFooter">

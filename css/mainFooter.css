@@ -73,6 +73,7 @@ footer {
 
 .location h2 {
 	font-weight: normal;
+	margin: 15px 0 0 0;
 }
 
 .contact {
@@ -85,12 +86,13 @@ footer {
 
 .contact h2 {
 	font-weight: normal;
+	margin: 15px 0 0 0;
 }
 
 .contact #chippyContact {
 	position: relative;
 	height: 200px;
-	margin: 8px 0 20px 0;
+	margin: 15px 0 20px 0;
 	font-size: 80%;
 }
 
@@ -101,7 +103,7 @@ footer {
 
 .contact #pedreguerContact {
 	height: 200px;
-	margin: 8px 0;
+	margin: 38px 0 0 0;
 	font-size: 80%;
 }
 
