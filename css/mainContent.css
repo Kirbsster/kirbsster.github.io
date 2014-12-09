@@ -446,13 +446,14 @@ ul, ul li {
 	float: left;
 	width: 60%;
 	margin: 0 0 50px 0;
-	
+	overflow: hidden;
 }
 
 .projectGallery .imgWindow {
 	position: relative;
 	width: 100%;
 	max-height: 200px;
+	
 }
 
 .projectGallery .imgContainer {
