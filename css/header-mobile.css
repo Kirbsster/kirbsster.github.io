@@ -12,24 +12,25 @@ a:link, a:visited {
 
 .logo {
 	width: 100%;
-	float: left;
 	margin: 0;
 	padding: 0;
 }
 
 .logo a {
 	margin: 0;
+
 }
 
 .logo img {
-	margin: 20px 0 0 0;
+	margin: 0 0 10px 0;
+	height: 30px;
 	padding: 0;
 	border-style:none;
 }
 
 .mainHeader {
 	max-width: 1080px;
-	height: 120px;
+	
 	margin: 0 auto;
 	background-color: rgb(255,255,255);
 }
@@ -38,7 +39,7 @@ a:link, a:visited {
 	position: relative;
 	width: 100%;
 	float: right;
-	margin: 16px 0 0 0;
+	margin: 0 0 0 0;
 	padding: 0;
 	display: flex;
 	flex-direction:row-reverse;
@@ -60,8 +61,6 @@ a:link, a:visited {
 
 .navBar div:hover {
 	background-color: rgb(255,255,0);
-	border-top: 1px solid rgb(150,150,150);
-	border-bottom: 1px solid rgb(150,150,150);
 	cursor: pointer;
 }
 
