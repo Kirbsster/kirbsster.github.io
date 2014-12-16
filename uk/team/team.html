@@ -6,10 +6,13 @@
 	</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="../../css/header.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/header-mobile.css" type="text/css" />
 	<link rel="stylesheet" href="../../css/mainContent.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/mainContent-mobile.css" type="text/css" />
 	<link rel="stylesheet" href="../../css/body.css" type="text/css" />
 	<link rel="stylesheet" href="../../css/sidebar.css" type="text/css" />
 	<link rel="stylesheet" href="../../css/mainFooter.css" type="text/css" />
+	<link rel="stylesheet" href="../../css/mainFooter-mobile.css" type="text/css" />
 	<link rel="stylesheet" href="../../css/img.css" type="text/css" />
 	<meta name="viewport" content="width-device-width, initial-scale=1.0"/>
 	<script type="text/javascript" src="../../js/readmore.js"></script>
@@ -68,26 +71,28 @@
 </head>
 <body class="body">
 	<header class="mainHeader">	
-		<a class="logo" href="#"><img src="../../img/logo.png"></a>
+		
 		<div class="langs">
 			<a class="lang-uk" href="#">en</a>
 			<div class="langsDivide"></div>
-			<a class="lang-cat" href="#">es</a>
+			<a class="lang-es" href="#">es</a>
 			<div class="langsDivide"></div>
 			<a class="lang-cat" href="#">cat</a>
 		</div>
+		<div class="logo">
+			<a href="#"><img src="../../img/logo.png"></a>
+		</div>
 		<nav class="navBar">		
-			<a href="#"><div class="blog">BLOG</div></a>
+			<a href="http://blog.en.alambilab.com/"><div class="blog">BLOG</div></a>
 			<a href="../projects/projects.html"><div class="projects">PROJECTS</div></a>
 			<a href="../aboutus/aboutus.html"><div class="aboutus">ABOUT US</div></a>
-			<a href="team.html"><div class=" active team">TEAM</div></a>
-			<a href="../../index.html"><div class=" home">HOME</div></a>
+			<a href="../team/team.html"><div class="active team">TEAM</div></a>
+			<a href="../../index.html"><div class="home">HOME</div></a>
 		</nav>		
 	</header>
 
 	<div class="headerDivider"></div>	
 	<main id="mainContent">
-		<h1>TEAM</h1>
 		<div id="teamStatement">
 			<span><p><b>AlambiLAB</b> architects are committed to <b>high quality</b> design that respects the environment. Our aim is to <b>improve people's lifestyle</b> with good design. We adapt our architecture to reflect the needs of our clients and create spaces that are in harmony with their surroundings.</p><p><b>AlambiLAB</b> is run by Jaume Miralles and Laia Mulet. We are a young, enthusiastic team with a broad range of experience in the UK and Spain.</p></span>
 		</div>
@@ -129,18 +134,29 @@
 
 	</main>
 
-	<footer class="mainFooter">		
+	<footer class="mainFooter">
+		
 		<div class="subFooter">
-			<div class="location">
-				<h2>LOCATION</h2>
-				<div id="map2-canvas"></div>
-				<div id="map1-canvas"></div>			
+
+			<div id="socialButtons">
+				<div id="socialButtonContainer">
+					
+					<input type="radio" id="twitterButton" name="socialButtons" >
+					<label for="twitterButton" id="twitterLabel"><a target="_blank" href="https://twitter.com/alambilab"><img src="../../img/twitter.png"></a></label>
+					<input type="radio" id="fbButton" name="socialButtons" checked>
+					<label for="fbButton" id="fbLabel"><a target="_blank" href="https://www.facebook.com/alambilab"><img src="../../img/fb.png"></a></label>
+					<input type="radio" id="instagramButton" name="socialButtons" >
+					<label for="instagramButton" id="instagramLabel"><a target="_blank" href="http://instagram.com/alambilab"><img src="../../img/instagram.png"></a></label>
+					<input type="radio" id="pinterestButton" name="socialButtons" >
+					<label for="pinterestButton" id="pinterestLabel"><a target="_blank" href="https://www.pinterest.com/alambiLAB/"><img src="../../img/pinterest.png"></a></label>
+				</div>	
 			</div>
+
 			<div class="contact">
 				<h2>CONTACT</h2>
 				<div id="pedreguerContact">
 				<ul>
-					<span>				
+					<span>
 					<li>PEDREGUER</li>
 					<li>Plaça Santa Marta, 15</li>
 					<li>03750</li>
@@ -163,6 +179,7 @@
 					<li>Chipping Norton</li>
 					<li>OX7 7BU</li>
 					<br>
+					<br>
 					<li>TEL: +44(0)7533 521635</li>
 					<li>EMAIL: <a href="#">alambilab@gmail.com</a></li>
 					</span>
@@ -170,20 +187,14 @@
 				</div>
 
 			</div>
-			<div id="socialButtons">
-				<div id="socialButtonContainer">
-					
-					<input type="radio" id="twitterButton" name="socialButtons" >
-					<label for="twitterButton" id="twitterLabel"><a target="_blank" href="https://twitter.com/alambilab"><img src="../../img/twitter.png"></a></label>
-					<input type="radio" id="fbButton" name="socialButtons" checked>
-					<label for="fbButton" id="fbLabel"><a target="_blank" href="https://www.facebook.com/alambilab"><img src="../../img/fb.png"></a></label>
-					<input type="radio" id="instagramButton" name="socialButtons" >
-					<label for="instagramButton" id="instagramLabel"><a target="_blank" href="http://instagram.com/alambilab"><img src="../../img/instagram.png"></a></label>
-					<input type="radio" id="pinterestButton" name="socialButtons" >
-					<label for="pinterestButton" id="pinterestLabel"><a target="_blank" href="https://www.pinterest.com/alambiLAB/"><img src="../../img/pinterest.png"></a></label>
-				</div>	
+
+			<div class="location">
+				<h2>LOCATION</h2>
+				<div id="map2-canvas"></div>
+				<div id="map1-canvas"></div>
+				
 			</div>
-			
+
 			<div id="socialBox">
 				<div id="fbColumn">
 

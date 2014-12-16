@@ -1,57 +1,154 @@
-function gallery() {
-	var currentLeft = 0;
-	var nextLeft = 0;
-	var windowWidth = $('.imgWindow').width();
-	var numImgs = $('.imgContainer img').length;
-	var i = 0;				
-	
+function galleryHome() {	
+	var currentImgWidth
+		, nextImgWidth
+		, prevImgWidth
+		, currentLeft = 0
+		, nextLeft
+		, prevLeft=0
+		, numImgs = $('.imgContainer img').length			
+		, currentImg = 1
+		, nextImg
+		, prevImg=0;
 	galleryPlay();
 	function galleryPlay() {
-		$('.imgContainer img').each(function(){
-			$(this).css('opacity','0');
-		});
-		$('.imgContainer img').eq(i).css('opacity','1');
-		clicked();
+
+		$('.imgContainer img').eq(0).css('opacity','1');
+		
+		clickedForward();
+		clickedBack();
+		clickedLabel();
 		setInterval(function(){		
-			if(i>=numImgs){
-				i=0;
-				nextLeft=0;
-				currentLeft=0;
-			}
+			
 			$('.imgContainer img').each(function(){
 				$(this).css('opacity','0');
 			});
-			$('.imgContainer').css('left',-nextLeft+"px");
-			$('.imgContainer img').eq(i).css('opacity','1');
-			$('.imgSelect input').eq(i).prop('checked', true);
-			var currentImgWidth = $('.imgContainer figure img').eq(i).width()
-			var nextImgWidth = $('.imgContainer figure img').eq(i+1).width()
-			nextLeft = currentLeft + currentImgWidth/2 + nextImgWidth/2;
-			i++;
-			currentLeft = nextLeft;
-		}, 3000);
-		function clicked() {
+			nextImg = currentImg + 1;
+			$('.imgContainer img').eq(currentImg).css('opacity','1');	
+			$('.imgSelect input').eq(currentImg).prop('checked', true);
+			
+			if (currentImg==0){
+				nextLeft=0;
+			} if (currentImg>=numImgs){
+				currentImg=0;
+				currentLeft=0;
+				nextImg=1;
+				nextLeft=0;
+				$('.imgContainer img').eq(currentImg).css('opacity','1');
+				$('.imgSelect input').eq(currentImg).prop('checked', true);
+			} else {
+				currentLeft = Math.round($('.imgContainer').position().left);
+				currentImgWidth = $('.imgContainer figure img').eq(currentImg-1).width()
+				nextImgWidth = $('.imgContainer figure img').eq(nextImg-1).width()
+				nextLeft = currentLeft - currentImgWidth/2 - nextImgWidth/2;
+			}
+			
+			$('.imgContainer').css('left',nextLeft+"px");
+			currentImg++;
+			//alert(currentImg+' '+currentImgWidth+' '+nextImg+' '+nextImgWidth+' '+currentLeft+' '+nextLeft);
+		}, 10000);
+		function clickedLabel() {
 			$('.imgSelect label').click(function() {
-				var cLeft=0;
-				var nLeft=0;
 				var index = $('.imgSelect label').index(this);
+				nextLeft=0;
+				currentImg=0;
+				currentLeft=0;
+				$('.imgContainer img').each(function(){
+					$(this).css('opacity','0');
+				});
 				$('.imgContainer img').each(function(j){
 					if(j==index){
-						$('.imgContainer').css('left',-nLeft+"px");
-						$('.imgContainer img').each(function(){
-							$(this).css('opacity','0');
-						});
-						$('.imgContainer img').eq(j).css('opacity','1');
-						i=index;
-						nextLeft=nLeft;
-						currentLeft=cLeft;
-						return false;
+						$('.imgContainer img').eq(currentImg).css('opacity','1');
+						$('.imgSelect input').eq(currentImg).prop('checked', true);
+						currentImgWidth = $('.imgContainer figure img').eq(currentImg).width()
+						nextImgWidth = $('.imgContainer figure img').eq(nextImg).width()
+						$('.imgContainer').css('left',nextLeft+"px");
+
+						//for next loop
+						currentImg++;
+						return false;				
 					}
-					var curWidth = $('.imgContainer figure img').eq(j).width()
-					var nextWidth = $('.imgContainer figure img').eq(j+1).width()
-					nLeft = cLeft + curWidth/2 + nextWidth/2;
-					cLeft = nLeft;
+					nextImg = currentImg + 1;
+					currentLeft = nextLeft;
+					currentImgWidth = $('.imgContainer figure img').eq(currentImg).width()
+					nextImgWidth = $('.imgContainer figure img').eq(nextImg).width()
+					nextLeft = currentLeft - currentImgWidth/2 - nextImgWidth/2;
+					currentImg++;
+					
 				});
+			});
+		}
+		function clickedForward() {
+			$('.imgWindow .forward').click(function() {
+				$('.imgContainer img').each(function(){
+					$(this).css('opacity','0');
+				});
+				$('.imgSelect input').each(function(){
+					if(this.checked) {
+						nextImg = currentImg + 1;
+						$('.imgContainer img').eq(currentImg).css('opacity','1');
+						$('.imgSelect input').eq(currentImg).prop('checked', true);
+						
+						if (currentImg==0){
+							nextLeft=0;
+						} if (currentImg>=numImgs){
+							currentImg=0;
+							currentLeft=0;
+							nextImg=1;
+							nextLeft=0;
+							$('.imgContainer img').eq(currentImg).css('opacity','1');
+							$('.imgSelect input').eq(currentImg).prop('checked', true);
+						} else {
+							currentLeft = Math.round($('.imgContainer').position().left);
+							currentImgWidth = $('.imgContainer figure img').eq(currentImg-1).width()
+							nextImgWidth = $('.imgContainer figure img').eq(nextImg-1).width()
+							nextLeft = currentLeft - currentImgWidth/2 - nextImgWidth/2;
+						}
+
+						$('.imgContainer').css('left',nextLeft+"px");
+						currentImg++;
+						return false
+					}		
+				});
+			});
+		}
+		function clickedBack() {
+			$('.imgWindow .back').click(function() {
+				$('.imgContainer img').each(function(){
+					$(this).css('opacity','0');
+				});
+				
+				if(currentImg<=0){
+					currentImg=0;
+					nextImg=1;
+					prevLeft=0;
+					currentLeft=0;
+					$('.imgContainer img').eq(currentImg).css('opacity','1');
+					$('.imgSelect input').eq(currentImg).prop('checked', true);
+				} if (currentImg==1){
+					currentImg=1;
+					nextImg=2;
+					currentLeft=0;
+					currentImgWidth = $('.imgContainer figure img').eq(currentImg-1).width()
+					prevImgWidth = $('.imgContainer figure img').eq(prevImg-1).width();
+					prevLeft = currentLeft + currentImgWidth/2 + prevImgWidth/2;
+					$('.imgContainer img').eq(currentImg-1).css('opacity','1');
+					$('.imgSelect input').eq(currentImg-1).prop('checked', true);		
+				} else {
+					currentLeft = Math.round($('.imgContainer').position().left);
+					prevImg = currentImg -1;
+					currentImgWidth = $('.imgContainer figure img').eq(currentImg-1).width()
+					prevImgWidth = $('.imgContainer figure img').eq(prevImg-1).width();
+					prevLeft = currentLeft + currentImgWidth/2 + prevImgWidth/2;
+					$('.imgContainer').css('left',prevLeft+"px");
+					//alert(currentImg+' '+prevImg+' '+currentImgWidth+' '+prevImgWidth+' '+currentLeft+' '+nextLeft)
+					currentImg = currentImg - 1;
+					nextImg = nextImg - 1;
+					$('.imgContainer img').eq(prevImg-1).css('opacity','1');
+					$('.imgSelect input').eq(prevImg-1).prop('checked', true);
+				}
+				//alert(prevImg+' '+currentImg+' '+nextImg)
+				prevImg = prevImg - 1;
+				
 			});
 		}
 	}

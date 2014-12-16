@@ -15,11 +15,12 @@
 	<link rel="stylesheet" href="../../css/mainFooter-mobile.css" type="text/css" />
 	<link rel="stylesheet" href="../../css/img.css" type="text/css" />
 	<meta name="viewport" content="width-device-width, initial-scale=1.0"/>
-	<script type="text/javascript" src="../../js/readmore.js"></script>
+	<script type="text/javascript" src="../../js/galleryProjects.js"></script>
 	<script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
 	<script type="text/javascript">
 		$(document).ready(function() {
+			galleryProjects();
 			function initialise() {
 				var mapCanvas1 = document.getElementById('map1-canvas');
 	    		var myLatlng1 = new google.maps.LatLng(51.928045,-1.366924);
@@ -93,185 +94,68 @@
 
 	<div class="headerDivider"></div>	
 	<main id="mainContent">
-		
-		<div id="projectsContainer">
-			
-			<div id="box1" class="flexbox">
-				<img src="../../img/projects/casaCultura-1.jpg">
-				<a href="projects-casaCultura.html"><div class="flexboxHeader">CULTURAL CENTRE</div>
-				<div class="projectFlexboxInfo">
-					<div class="title">
-						<h2>EXTENSION OF CUTURAL CENTRE</h2>
-					</div>
-					<div class="description">
-						<p>Renovation and extension of the cultural house building in Pedreguer to provide extra teaching and storage space</p>
-					</div>
-					<div class="details">
-						<ul>
-							<li><span>Location:</span> Alicante, Pedreguer</li>
-							<li><span>Year:</span> 2014</li>
-							<li><span>Area:</span> 110sqm</li>
-						</ul>
-					</div>
-				</div></a>
-			</div>
-			<div id="box2" class="flexbox">
-				<img src="../../img/projects/casaU-1.jpg">
-				<a href="projects-casaU.html"><div class="flexboxHeader">U HOUSE</div>
-				<div class="projectFlexboxInfo">
-					<div class="title">
-						<h2>U HOUSE</h2>
-					</div>
-					<div class="description">
-						<p>Detached house</p>
-					</div>
-					<div class="details">
-						<ul>
-							<li><span>Location:</span> Alicante, Pedreguer</li>
-							<li><span>Year:</span> 2014</li>
-							<li><span>Area:</span> 400sqm</li>
-						</ul>
-					</div>
-				</div></a>
-			</div>			
-			<div id="box3" class="flexbox">
-				<img src="../../img/projects/casaBarranc-1.jpg">
-				<a href="projects-casaBarranc.html"><div class="flexboxHeader">BARRANC HOUSE</div>
-				<div class="projectFlexboxInfo">
-					<div class="title">
-						<h2>BARRANC HOUSE</h2>
-					</div>
-					<div class="description">
-						<p>Terraced house</p>
-					</div>
-					<div class="details">
-						<ul>
-							<li><span>Location:</span> Alicante, Pedreguer</li>
-							<li><span>Year:</span> 2014</li>
-							<li><span>Area:</span> 400sqm</li>
-						</ul>
-					</div>
-				</div></a>
-			</div>			
-			<div id="box4" class="flexbox">
-				<img src="../../img/projects/casaPinella-1.jpg">
-				<a href="projects-casaPinella.html"><div class="flexboxHeader">PINELLA HOUSE</div>
-				<div class="projectFlexboxInfo">
-					<div class="title">
-						<h2>PINELLA HOUSE</h2>
-					</div>
-					<div class="description">
-						<p>Detached house</p>
-					</div>
-					<div class="details">
-						<ul>
-							<li><span>Location:</span> Alicante, Pedreguer</li>
-							<li><span>Year:</span> 2012</li>
-							<li><span>Area:</span> 400sqm</li>
-						</ul>
-					</div>
-				</div></a>
-			</div>			
-			<div id="box5" class="flexbox">
-				<img src="../../img/projects/jardiLluera-1.jpg">
-				<a href="projects-jardiLluerna.html"><div class="flexboxHeader">LLUERNA GARDEN</div>
-				<div class="projectFlexboxInfo">
-					<div class="title">
-						<h2>LLUERNA GARDEN</h2>
-					</div>
-					<div class="description">
-						<p>Designer Garden</p>
-					</div>
-					<div class="details">
-						<ul>
-							<li><span>Location:</span> Alicante, Pedreguer</li>
-							<li><span>Year:</span> 2013</li>
-							<li><span>Area:</span> 100sqm</li>
-						</ul>
-					</div>
-				</div></a>
-			</div>				
-			<div id="box6" class="flexbox">
-				<img src="../../img/projects/elsPoets-1.jpg">
-				<a href="projects-casaElsPoets.html"><div class="flexboxHeader">POETS HOUSE</div>
-				<div class="projectFlexboxInfo">
-					<div class="title">
-						<h2>POETS HOUSE</h2>
-					</div>
-					<div class="description">
-						<p>Detached House</p>
-					</div>
-					<div class="details">
-						<ul>
-							<li><span>Location:</span> Alicante, Pedreguer</li>
-							<li><span>Year:</span> 2013</li>
-							<li><span>Area:</span> 200sqm</li>
-						</ul>
-					</div>
-				</div></a>
-			</div>				
-			<div id="box7" class="flexbox">
-				<img src="../../img/projects/euroPan-1.jpg">
-				<a href="projects-euroPan.html"><div class="flexboxHeader">AP018 - NEST</div>
-				<div class="projectFlexboxInfo">
-					<div class="title">
-						<h2>AP018 - NEST</h2>
-					</div>
-					<div class="description">
-						<p>Urbanism and Residential<br>2nd Prize Europan 11</p>
-						<p></p>
-					</div>
-					<div class="details">
-						<ul>
-							<li><span>Location:</span> Allerød, Denmark</li>
-							<li><span>Year:</span> 2011</li>
-							<li><span>With:</span> Jennifer Gomes, Raquel Viula, Huasop Lee, Jorge Gil, Susana Oliveira, Sebastien Muller, Marco Buinhas</li>
-						</ul>
-					</div>
-				</div></a>
-			</div>				
-			<div id="box8" class="flexbox">
-				<img src="../../img/projects/deniaQuary-1.jpg">
-				<a href="projects-deniaQuary.html"><div class="flexboxHeader">DENIA QUARY DEVELOPMENT</div>
-				<div class="projectFlexboxInfo">
-					<div class="title">
-						<h2>DENIA QUARY DEVELOPMENT</h2>
-					</div>
-					<div class="description">
-						<p>Public Building with Commercial Units</p>
-						<p>Final Project</p>
-					</div>
-					<div class="details">
-						<ul>
-							<li><span>Location:</span> Denia, Alicante</li>
-							<li><span>Year:</span> 2008</li>
-							<li><span>Area:</span> 1000sqm</li>
-						</ul>
-					</div>
-				</div></a>
-			</div>			
-			<div id="box9" class="flexbox">
-				<img src="../../img/projects/coil-1.jpg">
-				<a href="projects-coil.html"><div class="flexboxHeader">COIL</div>
-				<div class="projectFlexboxInfo">
-					<div class="title">
-						<h2>COIL</h2>
-					</div>
-					<div class="description">
-						<p>Residential<br>Academic project</p>
-						<p></p>
-					</div>
-					<div class="details">
-						<ul>
-							<li><span>Location:</span> Dordrecht, Netherlands</li>
-							<li><span>Year:</span> 2006</li>
-							<li><span>Area:</span> 1000sqm</li>
-						</ul>
-					</div>
-				</div></a>
-			</div>
+		<div class="tags">
+			<ul>
+				<a href=""><li>architecture</li></a> >
+				<a href=""><li>public</li></a>
+			</ul>
 		</div>
-		
+		<div class="projectDetail">
+			<div class="projectDesc">
+				<div class="title">
+					<h2>PINELLA HOUSE</h2>
+				</div>
+				<div class="description">
+					<p>Detached House</p>
+				</div>
+				<div class="details">
+					<ul>
+						<li><span>Location:</span> Alicante, Pedreguer</li>
+						<li><span>Year:</span> 2014</li>
+						<li><span>Area:</span> 400sqm</li>
+					</ul>
+				</div>
+				<div class="extraDescription">
+					<p></p>
+				</div>				
+			</div>		
+			<a href="#"><div id="prevProject"><p><</p></div></a>
+			<a href="#"><div id="nextProject"><p>></p></div></a>
+			<div class="projectGallery">
+				<div class="imgWindow">
+					<div class="back"><img src="../../img/arrowLeft.png"></div>
+					<div class="forward"><img src="../../img/arrowRight.png"></div>
+					<div class="imgContainer">
+						<figure id="img-1"><img src="../../img/projects/projects-casaCultura/home-casaU-16-9.jpg"></figure>
+						<figure id="img-2"><img src="../../img/projects/projects-casaCultura/home-casaBarranc-2.jpg"></figure>
+						<figure id="img-3"><img src="../../img/projects/projects-casaCultura/home-casaPinella-16-9.jpg"></figure>
+						<figure id="img-4"><img src="../../img/projects/projects-casaCultura/home-casaLaia-16-9.jpg"></figure>
+						<figure id="img-1"><img src="../../img/projects/projects-casaCultura/home-casaU-16-9.jpg"></figure>
+						<figure id="img-2"><img src="../../img/projects/projects-casaCultura/home-casaBarranc-2.jpg"></figure>
+						<figure id="img-3"><img src="../../img/projects/projects-casaCultura/home-casaPinella-16-9.jpg"></figure>
+						<figure id="img-4"><img src="../../img/projects/projects-casaCultura/home-casaLaia-9-9.jpg"></figure>
+					</div>
+				</div>
+				<div class="imgSelect">	
+					<input type="radio" name="radio" id="img1" checked />
+					<label class='highlight' for="img1"><img src="../../img/projects/projects-casaCultura/home-casaU-16-9-thumb.jpg"></label>
+					<input type="radio" name="radio" id="img2" />
+					<label for="img2"><img src="../../img/projects/projects-casaCultura/home-casaBarranc-2-thumb.jpg"></label>
+					<input type="radio" name="radio" id="img3" />
+					<label for="img3"><img src="../../img/projects/projects-casaCultura/home-casaPinella-16-9-thumb.jpg"></label>	
+					<input type="radio" name="radio" id="img4" />
+					<label for="img4"><img src="../../img/projects/projects-casaCultura/home-casaLaia-16-9-thumb.jpg"></label>		
+					<input type="radio" name="radio" id="img1" />
+					<label class='highlight' for="img1"><img src="../../img/projects/projects-casaCultura/home-casaU-16-9-thumb.jpg"></label>
+					<input type="radio" name="radio" id="img2" />
+					<label for="img2"><img src="../../img/projects/projects-casaCultura/home-casaBarranc-2-thumb.jpg"></label>
+					<input type="radio" name="radio" id="img3" />
+					<label for="img3"><img src="../../img/projects/projects-casaCultura/home-casaPinella-16-9-thumb.jpg"></label>	
+					<input type="radio" name="radio" id="img4" />
+					<label for="img4"><img src="../../img/projects/projects-casaCultura/home-casaLaia-9-9-thumb.jpg"></label>						
+				</div>
+			</div>		
+		</div>	
 	</main>
 
 	<footer class="mainFooter">
