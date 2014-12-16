@@ -43,6 +43,7 @@ a:link, a:visited {
 	padding: 0;
 	display: flex;
 	flex-direction:row-reverse;
+	border-top: 1px solid rgb(150,150,150);
 	border-bottom: 1px solid rgb(150,150,150)
 }
 
@@ -89,7 +90,6 @@ a:link, a:visited {
 	height: 0;
 	max-width:1080px; 
 	margin: 0 auto 100px auto;
-	border-top: 1px solid rgb(150,150,150);
 }
 
 }
