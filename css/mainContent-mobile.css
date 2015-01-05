@@ -50,7 +50,7 @@ ul, ul li {
 	left: 0%;
 	opacity: 1;
 	margin: 0 auto;
-	width: 400%;
+	width: 800%;
 }
 
 #homeGallery .imgContainer figure {
@@ -61,7 +61,7 @@ ul, ul li {
 }
 
 #homeGallery .imgContainer img {
-	width: 25%;
+	width: 12.5%;
 	float: left;
 	opacity: 0;
 }
@@ -80,11 +80,10 @@ ul, ul li {
 
 #homeGallery .imgSelect label {
 	position: relative;
-	bottom: 1px;
-	height: 10px;
-	width: 25%;
-	border:1px solid rgb(180,180,180);
-	background-color: rgb(150,150,150);
+	margin: 1px 0px 0 0px;
+	height: 15px;
+	width: 12.5%;
+	background-color: rgb(30,30,30);
 }
 
 #homeGallery .imgSelect input[type="radio"] {
@@ -94,7 +93,7 @@ ul, ul li {
 }
 
 #homeGallery .imgSelect input[type="radio"]:checked + label {
-	background-color: rgb(255,255,0);
+	background-color: rgb(150,150,150);
 }
 
 #homeGallery .imgSelect label:hover {
@@ -347,7 +346,7 @@ ul, ul li {
 .flexbox {
 	position: relative;
 	background-color: #FFF;
-	height: 200px;
+	height: 205px;
 	max-width: 48%;
 	min-width: 100%;
 	flex:1 auto;

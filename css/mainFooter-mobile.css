@@ -1,10 +1,9 @@
 @media screen and (max-width: 840px) {
 
 footer {
-	position: relative;
+	
 	width: 100%;
-	float: left;
-	height: 625px;
+	height: 1000px;
 	color: #FFF;
 	background-color: rgb(30,30,30);
 	z-index: -1;
@@ -12,11 +11,7 @@ footer {
 
 .subFooter {
 	position: relative;
-	width: 99%;
 	height: 100%;
-	max-width: 1080px;
-	margin: auto;
-	padding: 0 0 0 0;
 }
 
 .subFooter img {
@@ -28,16 +23,12 @@ footer {
 	height: 20px
 }
 
-.subFooter div {
-	float: left;
-}
-
 .subFooter div ul {
 	list-style: none;
 	padding: 0 0;
 }
 
-.subFooter p {
+.subFooter .copyright {
 	position: absolute;
 	bottom: 0;
 	left: 0px;
@@ -46,28 +37,25 @@ footer {
 }
 
 #map1-canvas {
-	width: 48%;
-	height: 200px;
-	margin: 0 1%;
-	float: right;
+	display: none;
 }
 
 #map2-canvas {
+	display: block;
 	width: 48%;
 	height: 200px;
-	margin: 0 1%;
-	float: left;
+	margin: 0 auto;
 }
 
 .location {
-	margin: 0;
+	position: relative;
+	display: block;
 	width: 100%;
 }
 
 .location h2 {
-	display: none;
 	font-weight: normal;
-	margin: 15px 0 0 0;
+	margin: 15px 0;
 }
 
 .contact {
@@ -81,14 +69,12 @@ footer {
 .contact h2 {
 	font-weight: normal;
 	font-size: 95%;
-	margin: 15px 0 0 0;
+	margin: 15px 0;
+	text-align: center;
 }
 
 .contact #chippyContact {
-	position: relative;
-	width: 48%;
-	margin: 5px 1%;
-	font-size: 80%;
+	display: none;
 }
 
 .contact #chippyContact span {
@@ -97,14 +83,19 @@ footer {
 }
 
 .contact #pedreguerContact {
-	width: 48%;
-	margin: 5px 1%;
+	width: 100%;
+	margin: 0;
 	font-size: 80%;
+	text-align: center;
+}
+
+.contact #pedreguerContact li {
+	position: relative;
+	display: inline;
 }
 
 .contact #pedreguerContact span {
-	position: relative;
-	
+	display: block;
 }
 
 .links {
@@ -112,35 +103,70 @@ footer {
 	width: 25%;
 }
 
-#socialButtons {
-	position: relative;
+#blog h2 {
+	margin: 35px 1% 15px 0;
+	font-size: 100%;
+	text-align: center;
+}
+
+#blog .line {
+	width: 100%;
+	height: 110px;
+	margin: 0;
+}
+
+#blog .line:hover {
+	background-color: rgb(150, 150, 150);
+}
+
+#blog .blogImgContainer {
 	float: left;
-	margin: 0 auto;
+	width: 150px;
+	margin: 5px 15px 0 5px;
+	overflow: hidden;
+}
+
+#blog h3 {
+	margin: 0 0 0 5px;
+}
+
+#blog .postDate {
+	margin: 0 0 0 5px;
+	color:rgb(256, 256, 150);
+}
+
+#blog img {
+	height: 100px;
+}
+
+#blog {
+	width: 100%;
+	margin: 0;
+}
+
+#blog a {
+	cursor: pointer;
+}
+
+#socialButtons {
+	display: block;
 	width: 100%;
 }
 
-#socialButtons h2 {
-	position: relative;
-	float: left;
-	margin: 15px 0 0 55px;
-}
-
 #socialButtons input {
+	display: none;
 	position: absolute;
 	left: -99999px;
 }
 
 #socialButtonContainer {
-	position: relative;
-	float: left;
-	margin: 0 auto;
-	width: 100%;
+	margin: 25px auto 15px auto;
+	width: 190px;
 }
 
 #socialButtons img {
-	position: relative;
-	float: left;
-	margin: 20px 0px 5px 5px;
+	margin: 25px 2px;
+	width: 40px;
 }
 
 #socialButtons #fbLabel img:hover {

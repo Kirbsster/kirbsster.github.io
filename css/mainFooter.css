@@ -4,7 +4,7 @@ footer {
 	position: relative;
 	width: 100%;
 	float: left;
-	height: 525px;
+	height: 600px;
 	color: #FFF;
 	background-color: rgb(30,30,30);
 	z-index: -1;
@@ -37,7 +37,7 @@ footer {
 	padding: 0 0;
 }
 
-.subFooter p {
+.subFooter .copyright {
 	position: absolute;
 	bottom: 0;
 	left: 0px;
@@ -46,57 +46,46 @@ footer {
 }
 
 #map1-canvas {
-	width: 100%;
-	height: 207px;
-	margin: 0px 0 20px 0;
-	transition: width 0.5s ease;
-}
-
-#map1-canvas:hover {
-	width: 100%;
+	display: none;
 }
 
 #map2-canvas {
 	width: 100%;
-	height: 207px;
-	margin: 23px 0;
-	transition: width 0.5s ease;
-}
-
-#map2-canvas:hover {
-	width: 100%;
+	height: 218px;
+	margin: 0;
 }
 
 .location {
-	margin: 0;
-	width: 50%;
+	position: relative;
+	float: left;
+	margin: 25px 0 0 0;
+	width: 100%;
+
 }
 
 .location h2 {
 	font-weight: normal;
-	margin: 15px 0 0 0;
+	font-size: 90%;
+	margin: 0;
 }
 
 .contact {
 	position: relative;
 	left:5px;
-	margin: 0 0;
-	padding: 0 0px;
-	width: 25%;
-	
+	margin: 0;
+	padding: 0;
+	width: 20%;
+
 }
 
 .contact h2 {
 	font-weight: normal;
-	font-size: 50%;
-	margin: 15px 0 0 0;
+	font-size: 90%;
+	margin: 15px 0 35px 0;
 }
 
 .contact #chippyContact {
-	position: relative;
-	height: 200px;
-	margin: 30px 0 20px 0;
-	font-size: 80%;
+	display: none;
 }
 
 .contact #chippyContact span {
@@ -105,14 +94,12 @@ footer {
 }
 
 .contact #pedreguerContact {
-	height: 200px;
-	margin: 25px 0 0 0;
+	margin: 0;
 	font-size: 80%;
 }
 
 .contact #pedreguerContact span {
 	position: relative;
-	
 }
 
 .links {
@@ -120,11 +107,68 @@ footer {
 	width: 25%;
 }
 
+#blog h2 {
+	margin: 0 1% 35px 0;
+	font-size: 100%;
+}
+
+#blog .line {
+	width: 100%;
+	margin: 2px 0;
+	line-height: 100px;
+}
+
+#blog .line:hover {
+	background-color: rgb(150, 150, 150);
+}
+
+#blog .blogImgContainer {
+	width: 106px;
+	overflow: hidden;
+}
+
+#blog h3 {
+	display: block;
+}
+
+#blog span {
+	display: inline-block;
+	line-height: normal;
+	vertical-align: middle;
+	width: 40%;
+	margin: 5px 0 0 8%;
+}
+
+#blog .postDate {
+	color: rgb(256,256,100);
+	font-size: 80%;
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	float: left;
+}
+
+#blog img {
+	float: left;
+	height: 106px;
+	margin: 0;
+}
+
+#blog {
+	float: left;
+	width: 25%;
+	margin: 15px 1% 0 3%;
+}
+
+#blog a {
+	cursor: pointer;
+}
+
 #socialButtons {
 	position: relative;
 	float: right;
 	margin: 0 auto;
-	width: 25%;
+	width: 20%;
 }
 
 #socialButtons h2 {
@@ -174,27 +218,29 @@ footer {
 
 #socialBox {
 	position: relative;
-	height: 350px;
-	width: 20%;
 	float: right;
-	margin: 10px auto 0 auto;
+	height: 415px;
+	width: 50%;
+	bottom: 20px;
+	margin: 15px 0 0 0;
 	border-radius: 5px;
 }
 
-#fbColumn {
+#socialBox h2 {
 	position: relative;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto 0 auto;
-	background-color: #FFF;
+	bottom:35px;
+}
+
+#fbColumn {
 	display: none;
 }
 
 #twitterColumn {
 	position: relative;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto 0 auto;
+	float: right;
+	width: 35%;
+	height: 415px;
+	margin: 0 0 0 0;
 	background-color: #FFF;
 	border-radius: 5px;
 
@@ -202,11 +248,9 @@ footer {
 
 #pinterestColumn {
 	position: relative;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto 0 auto;
-	background-color: #000;
-	display: none;
+	float: left;
+	width: 65%;
+	overflow: hidden;
 }
 
 }

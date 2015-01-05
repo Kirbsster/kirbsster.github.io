@@ -83,7 +83,7 @@
 			<a href="#"><img src="../../img/logo.png"></a>
 		</div>
 		<nav class="navBar">		
-			<a href="http://blog.en.alambilab.com/"><div class="blog">BLOG</div></a>
+			<a target="_blank" href="http://blog.en.alambilab.com/"><div class="blog">BLOG</div></a>
 			<a href="../projects/projects.html"><div class="projects">PROJECTS</div></a>
 			<a href="../aboutus/aboutus.html"><div class="active aboutus">ABOUT US</div></a>
 			<a href="../team/team.html"><div class="team">TEAM</div></a>
@@ -166,47 +166,99 @@
 			<div class="contact">
 				<h2>CONTACT</h2>
 				<div id="pedreguerContact">
-				<ul>
-					<span>
-					<li>PEDREGUER</li>
-					<li>Plaça Santa Marta, 15</li>
-					<li>03750</li>
-					<li>Pedreguer</li>
-					<li>Alacant</li>
-					<br>
-					<li>TEL: +34 657 12 47 48 (Jaume)</li>
-					<li>TEL: +34 676 48 04 50 (Laia)</li>
-					<li>EMAIL: <a href="#">alambilab@gmail.com</a></li>
-				</span>
-				</ul>
+					<ul>
+						<span>
+						<li>PEDREGUER,</li>
+						<li>Plaça Santa Marta, 15,</li>
+						<li>03750,</li>
+						<li>Pedreguer,</li>
+						<li>Alacant,</li>
+						</span>
+					</ul>
+					<ul>
+						<span><li>TEL: +34 657 12 47 48 (Jaume)</li></spam>
+						<span><li>TEL: +34 676 48 04 50 (Laia)</li></span>
+						<span><li>EMAIL: <a href="#">alambilab@gmail.com</a></li></span>
+					</ul>
 				</div>
 
 				<div id="chippyContact">
-				<ul>
-					<span>
-					<li>CHIPPING NORTON</li>
-					<li>1 The Dock, South Street</li>
-					<li>Middle Barton</li>
-					<li>Chipping Norton</li>
-					<li>OX7 7BU</li>
-					<br>
-					<br>
-					<li>TEL: +44(0)7533 521635</li>
-					<li>EMAIL: <a href="#">alambilab@gmail.com</a></li>
-					</span>
-				</ul>
+					<ul>
+						<span>
+						<li>CHIPPING NORTON</li>
+						<li>1 The Dock, South Street</li>
+						<li>Middle Barton</li>
+						<li>Chipping Norton</li>
+						<li>OX7 7BU</li>
+						<br>
+						<br>
+						<li>TEL: +44(0)7533 521635</li>
+						<li>EMAIL: <a href="#">alambilab@gmail.com</a></li>
+						</span>
+					</ul>
 				</div>
-
+				<div class="location">
+					<h2>LOCATION</h2>
+					<div id="map2-canvas"></div>
+					<div id="map1-canvas"></div>
+				</div>
+			</div>
+			<div id="blog">
+				<h2>BLOG</h2>
+				<a target="_blank">
+					<div class="line">
+						<div class="blogImgContainer">
+							<img src="">
+						</div>
+						<span><h3 class="title"></h3>
+						<p class="postDate"></p></span>
+					</div>
+				</a>
+				<a target="_blank"><div class="line">
+					<div class="blogImgContainer">
+						<img src="">
+					</div>
+						<span><h3 class="title"></h3>
+						<p class="postDate"></p></span>
+				</div></a>
+				<a target="_blank"><div class="line">
+					<div class="blogImgContainer">
+						<img src="">
+					</div>
+						<span><h3 class="title"></h3>
+						<p class="postDate"></p></span>
+				</div></a>
+				<a target="_blank"><div class="line">
+					<div class="blogImgContainer">
+						<img src="">
+					</div>
+						<span><h3 class="title"></h3>
+						<p class="postDate"></p></span>
+				</div></a>
+			    <script>
+			      function handleResponse(response) {
+			      	for (var i = 0; i < 4; i++) {
+				       	document.getElementById("blog").getElementsByTagName("h3")[i].innerHTML += response.items[i].title;
+				      	var src_pattern = /(src=\")(.*?)\"/;
+				      	var img_src = src_pattern.exec(response.items[i].content);
+				      	document.getElementById("blog").getElementsByTagName("img")[i].src = img_src[2];
+				      	var postURL = response.items[i].url
+				      	document.getElementById("blog").getElementsByTagName("a")[i].href = postURL;
+				      	var postDate = response.items[i].published;
+				      	var datePattern = /([0-9]*)-([0-9]*)-([0-9]*)/;
+				      	dateFormatted = datePattern.exec(postDate);
+				      	//var dateFormatted = new Date(2015,11,25,0,0,0,0);
+				      	//month = dateFormatted[2];
+				      	document.getElementById("blog").getElementsByTagName("p")[i].innerHTML += dateFormatted[3] +"/"+ dateFormatted[2] +"/"+ dateFormatted[1];
+			      	}
+			      }
+			    </script>
+			    <script src="https://www.googleapis.com/blogger/v3/blogs/1781758911646633020/posts?callback=handleResponse&key=AIzaSyAxM5C7W9DHgYE0D2YWezUk-Rp1GZ1GNrw"></script>
 			</div>
 
-			<div class="location">
-				<h2>LOCATION</h2>
-				<div id="map2-canvas"></div>
-				<div id="map1-canvas"></div>
-				
-			</div>
-
+			
 			<div id="socialBox">
+				<h2>INSTAGRAM</h2>
 				<div id="fbColumn">
 
 				</div>
@@ -215,11 +267,11 @@
 					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 				</div>
 				<div id="pinterestColumn">
-
+					<iframe src="http://widget.websta.me/in/alambilab/?s=106&w=3&h=4&b=0&p=5" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:333px; height: 444px" ></iframe> <!-- websta - web.stagram.com -->
 				</div>
 			</div>
 
-			<p>Copyright &copy; <a href="#">2014 alambiLAB</a></p>
+			<p class="copyright">Copyright &copy; <a href="#">2014 alambiLAB</a></p>
 								
 		</div>
 		
